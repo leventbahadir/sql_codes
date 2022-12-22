@@ -1,0 +1,201 @@
+-- Table: public.satislar
+
+-- DROP TABLE IF EXISTS public.satislar;
+
+CREATE TABLE IF NOT EXISTS public.satislar
+(
+    "nOrderId" text COLLATE pg_catalog."default",
+    "Company" text COLLATE pg_catalog."default",
+    "CustomerID" text COLLATE pg_catalog."default",
+    "cPostCode" text COLLATE pg_catalog."default",
+    "dReceievedDate" text COLLATE pg_catalog."default",
+    "Country" text COLLATE pg_catalog."default",
+    status text COLLATE pg_catalog."default",
+    "Processed" text COLLATE pg_catalog."default",
+    "ProcessedDate" text COLLATE pg_catalog."default",
+    "Source" text COLLATE pg_catalog."default",
+    "Currency" text COLLATE pg_catalog."default",
+    "Subtotal" text COLLATE pg_catalog."default",
+    "Tax" text COLLATE pg_catalog."default",
+    "Total" text COLLATE pg_catalog."default",
+    "OrderItemSKU" text COLLATE pg_catalog."default",
+    "OrderItemTitle" text COLLATE pg_catalog."default",
+    "ItemCategory" text COLLATE pg_catalog."default",
+    "OrderItemQuantity" text COLLATE pg_catalog."default",
+    "DispatchStockUnitCost" text COLLATE pg_catalog."default",
+    "TotalWeight" text COLLATE pg_catalog."default",
+    "PurchasePrice" text COLLATE pg_catalog."default",
+    "TrackingNumber" text COLLATE pg_catalog."default",
+    "PostalService" text COLLATE pg_catalog."default"
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.satislar
+    OWNER to postgres;
+
+
+_____________________________________________________________________________________________________
+
+-- Table: public.iadeler
+
+-- DROP TABLE IF EXISTS public.iadeler;
+
+CREATE TABLE IF NOT EXISTS public.iadeler
+(
+    "Type" text COLLATE pg_catalog."default",
+    "nOrderId" text COLLATE pg_catalog."default",
+    "cPostCode" text COLLATE pg_catalog."default",
+    "CustomerID" text COLLATE pg_catalog."default",
+    "ItemNumber" text COLLATE pg_catalog."default",
+    "ItemTitle" text COLLATE pg_catalog."default",
+    "dReceievedDate" text COLLATE pg_catalog."default",
+    "cCountry" text COLLATE pg_catalog."default",
+    "cCountryCode" text COLLATE pg_catalog."default",
+    "cCurrency" text COLLATE pg_catalog."default",
+    source text COLLATE pg_catalog."default",
+    subsource text COLLATE pg_catalog."default",
+    "ReturnDate" text COLLATE pg_catalog."default",
+    "ReturnQty" text COLLATE pg_catalog."default",
+    "Category" text COLLATE pg_catalog."default",
+    "ResendOrExchangeQty" text COLLATE pg_catalog."default",
+    "RMAActioned" text COLLATE pg_catalog."default",
+    "RefundAmount" text COLLATE pg_catalog."default",
+    "ReturnReason" text COLLATE pg_catalog."default"
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.iadeler
+    OWNER to postgres;
+
+________________________________________________________________________________________________________________
+
+-- Table: public.urun_yorumlari
+
+-- DROP TABLE IF EXISTS public.urun_yorumlari;
+
+CREATE TABLE IF NOT EXISTS public.urun_yorumlari
+(
+    order_id text COLLATE pg_catalog."default",
+    review_title text COLLATE pg_catalog."default",
+    comments text COLLATE pg_catalog."default",
+    rating text COLLATE pg_catalog."default",
+    status text COLLATE pg_catalog."default",
+    date_created text COLLATE pg_catalog."default",
+    sku text COLLATE pg_catalog."default",
+    "Customer_ID" text COLLATE pg_catalog."default",
+    address text COLLATE pg_catalog."default",
+    product_sku text COLLATE pg_catalog."default",
+    product_name text COLLATE pg_catalog."default",
+    product_link text COLLATE pg_catalog."default",
+    video_review_prompt_id text COLLATE pg_catalog."default",
+    tags text COLLATE pg_catalog."default",
+    reply text COLLATE pg_catalog."default",
+    reply_private text COLLATE pg_catalog."default",
+    reply_date text COLLATE pg_catalog."default",
+    published_images text COLLATE pg_catalog."default",
+    unpublished_images text COLLATE pg_catalog."default",
+    published_videos text COLLATE pg_catalog."default",
+    unpublished_videos text COLLATE pg_catalog."default",
+    source text COLLATE pg_catalog."default",
+    location text COLLATE pg_catalog."default",
+    timeago text COLLATE pg_catalog."default",
+    video_first_campaign text COLLATE pg_catalog."default"
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.urun_yorumlari
+    OWNER to postgres;
+
+__________________________________________________________________________________________________________________________
+
+-- Table: public.diger_yorumlar
+
+-- DROP TABLE IF EXISTS public.diger_yorumlar;
+
+CREATE TABLE IF NOT EXISTS public.diger_yorumlar
+(
+    "Reporting_starts" text COLLATE pg_catalog."default",
+    "Reporting_ends" text COLLATE pg_catalog."default",
+    "Campaign_name" text COLLATE pg_catalog."default",
+    "Campaign_delivery" text COLLATE pg_catalog."default",
+    "Ad_set_budget" text COLLATE pg_catalog."default",
+    "Ad_set_budget_type" text COLLATE pg_catalog."default",
+    "Attribution_setting" text COLLATE pg_catalog."default",
+    "Results" text COLLATE pg_catalog."default",
+    "Result_indicator" text COLLATE pg_catalog."default",
+    "Reach" text COLLATE pg_catalog."default",
+    "Impressions" text COLLATE pg_catalog."default",
+    "Cost_per_results " text COLLATE pg_catalog."default",
+    "Amount_spent " text COLLATE pg_catalog."default",
+    "Ends " text COLLATE pg_catalog."default",
+    "Frequency " text COLLATE pg_catalog."default",
+    "Unique_link_clicks " text COLLATE pg_catalog."default",
+    "Landing_page_views " text COLLATE pg_catalog."default",
+    "Link_clicks " text COLLATE pg_catalog."default",
+    "Cost_per_landing_page_view " text COLLATE pg_catalog."default",
+    "Adds_to_cart " text COLLATE pg_catalog."default",
+    "Website_adds_to_cart " text COLLATE pg_catalog."default",
+    "Meta_add_to_cart " text COLLATE pg_catalog."default",
+    "Checkouts_initiated " text COLLATE pg_catalog."default",
+    "Website_checkouts_initiated " text COLLATE pg_catalog."default",
+    "Meta_checkouts_initiated " text COLLATE pg_catalog."default",
+    "Purchases " text COLLATE pg_catalog."default",
+    "Website_purchases " text COLLATE pg_catalog."default",
+    "Meta_purchases " text COLLATE pg_catalog."default",
+    "Purchases_Conversion_Value " text COLLATE pg_catalog."default",
+    "Website_purchases_conversion_value " text COLLATE pg_catalog."default",
+    "Meta_purchase_conversion_value " text COLLATE pg_catalog."default",
+    "Purchase_ROAS " text COLLATE pg_catalog."default",
+    "Website_purchase_ROAS " text COLLATE pg_catalog."default"
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.diger_yorumlar
+    OWNER to postgres;
+
+_______________________________________________________________________________________________________________
+
+
+-- Table: public.kampanya
+
+-- DROP TABLE IF EXISTS public.kampanya;
+
+CREATE TABLE IF NOT EXISTS public.kampanya
+(
+    "State" text COLLATE pg_catalog."default",
+    "Campaigns" text COLLATE pg_catalog."default",
+    "Status" text COLLATE pg_catalog."default",
+    "Type" text COLLATE pg_catalog."default",
+    "Targeting" text COLLATE pg_catalog."default",
+    "Campaignbiddingstrategy" text COLLATE pg_catalog."default",
+    "Startdate" text COLLATE pg_catalog."default",
+    "Enddate" text COLLATE pg_catalog."default",
+    "Portfolio" text COLLATE pg_catalog."default",
+    "Budget(GBP)" text COLLATE pg_catalog."default",
+    "Top-of-searchIS" text COLLATE pg_catalog."default",
+    "Costtype" text COLLATE pg_catalog."default",
+    "Impressions" text COLLATE pg_catalog."default",
+    "Clicks" text COLLATE pg_catalog."default",
+    "CTR" text COLLATE pg_catalog."default",
+    "Spend(GBP)" text COLLATE pg_catalog."default",
+    "CPC(GBP)" text COLLATE pg_catalog."default",
+    "Orders" text COLLATE pg_catalog."default",
+    "Sales(GBP)" text COLLATE pg_catalog."default",
+    "ACOS" text COLLATE pg_catalog."default",
+    "ROAS" text COLLATE pg_catalog."default",
+    "NTBorders" text COLLATE pg_catalog."default",
+    "%ofordersNTB" text COLLATE pg_catalog."default",
+    "NTBsales(GBP)" text COLLATE pg_catalog."default",
+    "%ofsalesNTB" text COLLATE pg_catalog."default",
+    "Viewableimpressions" text COLLATE pg_catalog."default",
+    "VCPM(GBP)" text COLLATE pg_catalog."default"
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.kampanya
+    OWNER to postgres;
